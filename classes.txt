@@ -1,0 +1,60 @@
+[
+   {
+      "subject": "CSC",
+      "number": "102",
+      "lectures": [
+         {
+            "section": "01",
+            "times": [
+               {
+                  "day": "MT",
+                  "time": "10:30am - 11:30am"
+               },
+               {
+                  "day": "R",
+                  "time": "12:00pm - 3:00pm"
+               }
+            ],
+            "labs": [
+               "03"
+            ]
+         },
+         {
+            "section": "02",
+            "times": [
+               {
+                  "day": "WR",
+                  "time": "10:30am - 11:30am"
+               },
+               {
+                  "day": "F",
+                  "time": "12:00pm - 3:00pm"
+               }
+            ],
+            "labs": [
+               "04"
+            ]
+         }
+      ],
+      "labs": [
+         {
+            "section": "03",
+            "times": [
+               {
+                  "day": "R",
+                  "time": "3:00pm - 6:00pm"
+               }
+            ]
+         },
+         {
+            "section": "04",
+            "times": [
+               {
+                  "day": "F",
+                  "time": "3:00pm - 6:00pm"
+               }
+            ]
+         }
+      ]
+   }
+]

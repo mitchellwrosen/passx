@@ -56,7 +56,7 @@ func validateClass(class Class) error {
 
 	// Validate labs first, to keep a list of all labs (referenced by lectures)
 	labSections := make([]string, len(class.Labs))
-	for _, lab := range class.Labs {
+	for index, lab := range class.Labs {
 		if lab.Section == "" {
 			return fmt.Errorf("Error validating %s %s lab: "+
 				"missing \"section\"", class.Subject, class.Number)
@@ -68,7 +68,7 @@ func validateClass(class Class) error {
 				class.Subject, class.Number, lab.Section, err)
 		}
 
-		labSections = append(labSections, lab.Section)
+		labSections[index] = lab.Section
 	}
 
 	for _, lecture := range class.Lectures {
@@ -86,7 +86,7 @@ func validateClass(class Class) error {
 		for _, lab := range lecture.Labs {
 			var found bool
 			for _, labSection := range labSections {
-				if lecture.Section == labSection {
+				if lab == labSection {
 					found = true
 					break
 				}

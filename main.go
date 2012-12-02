@@ -1,31 +1,23 @@
 package main
 
 import (
-	"encoding/json"
-	//"fmt"
-	"io/ioutil"
-	"log"
+	"fmt"
+	"os"
 
 	"github.com/mitchellwrosen/passx-go/passx"
 )
 
 func main() {
-	jsonBlob, err := ioutil.ReadFile("classes.txt")
+	if len(os.Args) != 2 {
+		panic("Usage: main <filename>")
+	}
+
+	classes, err := passx.ParseClassesFile(os.Args[1])
 	if err != nil {
 		panic(err)
 	}
+	fmt.Printf("Classes: %v\n", classes)
 
-	//log.Println(jsonBlob)
-
-	var classes []passx.Class
-	err = json.Unmarshal(jsonBlob, &classes)
-	if err != nil {
-		log.Fatal("Error parsing classes.txt: ", err)
-	}
-	log.Println(classes)
-
-	err = passx.ValidateClasses(classes)
-	if err != nil {
-		log.Fatal(err)
-	}
+	schedules := passx.GenerateSchedules(classes)
+	fmt.Printf("Schedules: %v\n", schedules)
 }

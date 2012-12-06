@@ -1,30 +1,13 @@
 [
    {
       "subject": "CSC",
-      "number": "102",
+      "number": "101",
       "lectures": [
          {
             "section": "01",
-            "times": [
-               {
-                  "days": "M",
-                  "from": 1200,
-                  "to": 1300
-               }
-            ],
-            "labs": [ "02" ]
-         }
-      ],
-      "labs": [
-         {
-            "section": "02",
-            "times": [
-               {
-                  "days": "R",
-                  "from": 1500,
-                  "to": 1800
-               }
-            ]
+            "days": "M",
+            "from": 1200,
+            "to": 1330
          }
       ]
    }

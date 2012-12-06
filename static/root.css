@@ -1,0 +1,27 @@
+ul {
+   list-style-type: none;
+}
+
+.class-panel {
+   display: inline-block;
+}
+
+.class:hover {
+   border: 1px solid black;
+}
+
+.class-num {
+   display: inline-block;
+}
+
+.class-text-fields {
+   //display: inline-block;
+}
+
+.add-lec-button {
+   display: inline-block;
+}
+
+.add-lab-button {
+   display: inline-block;
+}

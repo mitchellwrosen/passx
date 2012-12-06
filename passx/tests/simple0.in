@@ -1,0 +1,19 @@
+[
+   {
+      "subject": "CSC",
+      "number": "101",
+      "units": 4,
+      "groups": [
+         {
+            "lecs": [
+               {
+                  "section": "01",
+                  "days": "M",
+                  "from": 1200,
+                  "to": 1250
+               }
+            ]
+         }
+      ]
+   }
+]

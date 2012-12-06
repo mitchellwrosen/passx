@@ -1,0 +1,160 @@
+[
+   {
+      "subject": "CSC",
+      "number": "520",
+      "units": 4,
+      "lectures": [
+         {
+            "section": "01",
+            "days": "MWF",
+            "from": 1400,
+            "to": 1500,
+            "labs": [ "02" ]
+         }
+      ],
+      "labs": [
+         {
+            "section": "02",
+            "days": "MWF",
+            "from": 1500,
+            "to": 1600
+         }
+      ]
+   },
+   {
+      "subject": "CSC",
+      "number": "484",
+      "units": 4,
+      "lectures": [
+         {
+            "section": "01",
+            "days": "TR",
+            "from": 800,
+            "to": 930,
+            "labs": [ "02" ]
+         }
+      ],
+      "labs": [
+         {
+            "section": "02",
+            "days": "TR",
+            "from": 930,
+            "to": 1100
+         }
+      ]
+   },
+   {
+      "subject": "CSC",
+      "number": "300",
+      "units": 4,
+      "lectures": [
+         {
+            "section": "01",
+            "days": "TR",
+            "from": 1200,
+            "to": 1330,
+            "labs": [ "02" ]
+         }
+      ],
+      "labs": [
+         {
+            "section": "02",
+            "days": "TR",
+            "from": 1330,
+            "to": 1500
+         }
+      ]
+   },
+   {
+      "subject": "CSC",
+      "number": "481",
+      "units": 4,
+      "lectures": [
+         {
+            "section": "01",
+            "days": "TR",
+            "from": 1500,
+            "to": 1630,
+            "labs": [ "02" ]
+         }
+      ],
+      "labs": [
+         {
+            "section": "02",
+            "days": "TR",
+            "from": 1630,
+            "to": 1800
+         }
+      ]
+   },
+   {
+      "subject": "CSC",
+      "number": "428",
+      "units": 4,
+      "lectures": [
+         {
+            "section": "01",
+            "days": "MWF",
+            "from": 1000,
+            "to": 1100,
+            "labs": [ "02" ]
+         }
+      ],
+      "labs": [
+         {
+            "section": "02",
+            "days": "R",
+            "from": 800,
+            "to": 1100
+         }
+      ]
+   },
+   {
+      "subject": "CSC",
+      "number": "309",
+      "units": 4,
+      "lectures": [
+         {
+            "section": "01",
+            "days": "MWF",
+            "from": 1100,
+            "to": 1200,
+            "labs": [ "02" ]
+         },
+         {
+            "section": "03",
+            "days": "MWF",
+            "from": 1500,
+            "to": 1600,
+            "labs": [ "04" ]
+         }
+      ],
+      "labs": [
+         {
+            "section": "02",
+            "days": "MWF",
+            "from": 1200,
+            "to": 1300
+         },
+         {
+            "section": "04",
+            "days": "MWF",
+            "from": 1600,
+            "to": 1700
+         }
+      ]
+   },
+   {
+      "subject": "MATH",
+      "number": "451",
+      "units": 4,
+      "lectures": [
+         {
+            "section": "01",
+            "days": "TR",
+            "from": 1600,
+            "to": 1800
+         }
+      ]
+   }
+]

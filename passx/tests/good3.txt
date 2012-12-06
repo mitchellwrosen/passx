@@ -1,0 +1,52 @@
+[
+   {
+      "subject": "CSC",
+      "number": "101",
+      "lectures": [
+         {
+            "section": "01",
+            "times": [
+               {
+                  "days": "M",
+                  "from": 1200,
+                  "to": 1330
+               }
+            ],
+            "labs": [ "03", "04" ]
+         },
+         {
+            "section": "02",
+            "times": [
+               {
+                  "days": "T",
+                  "from": 1200,
+                  "to": 1330
+               }
+            ],
+            "labs": [ "03", "04" ]
+         }
+      ],
+      "labs": [
+         {
+            "section": "03",
+            "times": [
+               {
+                  "days": "M",
+                  "from": 1330,
+                  "to": 1500
+               }
+            ]
+         },
+         {
+            "section": "04",
+            "times": [
+               {
+                  "days": "T",
+                  "from": 1330,
+                  "to": 1500
+               }
+            ]
+         }
+      ]
+   }
+]

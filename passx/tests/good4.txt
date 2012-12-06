@@ -1,0 +1,26 @@
+[
+   {
+      "subject": "CSC",
+      "number": "101",
+      "lectures": [
+         {
+            "section": "01",
+            "days": "M",
+            "from": 1200,
+            "to": 1330
+         }
+      ]
+   },
+   {
+      "subject": "CSC",
+      "number": "102",
+      "lectures": [
+         {
+            "section": "01",
+            "days": "T",
+            "from": 1200,
+            "to": 1330
+         }
+      ]
+   }
+]

@@ -1,0 +1,32 @@
+<script id="new-class" type="text/template">
+<div class="class">
+   <div class="class-rb">
+      <input type="radio" name="class-rb"
+            onclick="onClassRbClicked({{classNum}})">
+   </div>
+   <div class="class-num">
+      {{classNum}}
+   </div>
+   <div class="class-text-fields">
+      Subject: <input type="text" name="subject"><br>
+      Number: <input type="text" name="number"><br>
+      Units: <input type="text" name="units"><br>
+   </div>
+</div>
+</script>
+
+<script id="new-lec" type="text/template">
+<div class="class{{classNum}}-sec">
+   <div class="section-text-fields">
+      Section: <input type="text" name="section"><br>
+      Days:
+         <input type="checkbox" name="day-m">M<br>
+         <input type="checkbox" name="day-t">T<br>
+         <input type="checkbox" name="day-w">W<br>
+         <input type="checkbox" name="day-r">R<br>
+         <input type="checkbox" name="day-f">F<br>
+      From: <input type="text" name="from"><br>
+      To: <input type="text" name="to"><br>
+   </div>
+</div>
+</script>

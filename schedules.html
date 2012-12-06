@@ -1,0 +1,129 @@
+<html>
+<head>
+<style type="text/css">
+   .page {
+      width: 1000px;
+   }
+
+   .cell {
+      display: inline-block;
+      padding: 0px;
+   }
+
+   .classCell {
+      text-align: center;
+      width: 150px;
+   }
+
+   .leftCell {
+      text-align: right;
+      width: 50px;
+   }
+
+   .header {
+      text-align: center;
+      width: 150px;
+   }
+
+   .schedule {
+      border: 1px solid black;
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-bottom: 40px;
+      margin-left: 10px;
+      padding: 10px;
+   }
+</style>
+
+<script type="text/javascript">
+var days = ["M", "T", "W", "R", "F"];
+var fullDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+var schedules = {{printf "%s" .}};
+
+function classToString(cls) {
+   var str = "";
+   if (cls["Lec"]) {
+      str += cls["Subject"] + " " + cls["Number"] + "-" +
+         cls["Lec"]["Section"] + " " + cls["Lec"]["Days"] + " " +
+         cls["Lec"]["From"] + "-" + cls["Lec"]["To"] + "<br>";
+   }
+
+   if (cls["Lab"]) {
+      str += cls["Subject"] + " " + cls["Number"] + "-" +
+         cls["Lab"]["Section"] + " " + cls["Lab"]["Days"] + " " +
+         cls["Lab"]["From"] + "-" + cls["Lab"]["To"] + "<br>";
+   }
+
+   console.log("class string: " + str);
+   return str
+}
+
+function scheduleToString(schedule) {
+   var str = '<div class="schedule">';
+
+   str += '<div class="row">';
+   str += '<div class="cell leftCell"></div>';
+   for (var i = 0; i < days.length; i++) {
+      str += '<div class="cell header">';
+      str += fullDays[i];
+      str += '</div>'
+   }
+   str += '</div>'
+
+   for (var time = 700; time < 2200; time += 50) {
+      str += '<div class="row">';
+      str += '<div class="cell leftCell">' + time + '</div>';
+
+      for (var i = 0; i < days.length; i++) {
+         var day = days[i];
+         str += '<div class="cell classCell">';
+
+         var cellText = "";
+         console.log(schedule["Classes"].length);
+         for (var j = 0; j < schedule["Classes"].length; j++) {
+            console.log("schedule " + j + ": " + schedule["Classes"][j]);
+            var cls = schedule["Classes"][j];
+            var lec = cls["Lec"];
+            var lab = cls["Lab"];
+
+            if (lec && lec["Days"].indexOf(day) !== -1 &&
+                  time >= lec["From"] && time < lec["To"]) {
+               cellText = cls["Subject"] + " " + cls["Number"] + "-" +
+                     lec["Section"];
+            } else if (lab && lab["Days"].indexOf(day) !== -1 &&
+                  time >= lab["From"] && time < lab["To"]) {
+               cellText = cls["Subject"] + " " + cls["Number"] + "-" +
+                     lab["Section"];
+            }
+         }
+
+         str += cellText;
+         str += '</div>';
+      }
+
+      str += '</div>';
+   }
+
+   str += '</div>';
+   return str
+}
+
+function init() {
+   console.log(schedules);
+   console.log(schedules.length);
+   for (var i = 0; i < schedules.length; i++) {
+      document.getElementById("schedules").innerHTML +=
+         scheduleToString(schedules[i]);
+   }
+}
+
+document.addEventListener("DOMContentLoaded", init)
+</script>
+<!--<script type="text/javascript" src="schedules.js"></script>-->
+</head>
+<body>
+<div class="page">
+<div id="schedules"></div>
+</div>
+</body>
+</html>

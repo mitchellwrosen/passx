@@ -1,0 +1,86 @@
+<html>
+<head>
+<script type="text/javascript">
+function loadExample() {
+   document.getElementById("classes").value =
+      document.getElementById("example").innerHTML
+}
+</script>
+</head>
+<body>
+<pre>
+<div id="example" style="display: none;">
+[
+   {
+      "subject": "BIO",
+      "number": "101",
+      "units": 4,
+      "groups": [
+         {
+            "lecs": [
+               {
+                  "section": "01",
+                  "days": "MWF",
+                  "from": 1200,
+                  "to": 1350
+               }
+            ],
+            "labs": [
+               {
+                  "section": "02",
+                  "days": "T",
+                  "from": 800,
+                  "to": 1100
+               }
+            ]
+         },
+         {
+            "lecs": [
+               {
+                  "section": "03",
+                  "days": "MWF",
+                  "from": 1350,
+                  "to": 1500
+               }
+            ],
+            "labs": [
+               {
+                  "section": "04",
+                  "days": "R",
+                  "from": 800,
+                  "to": 1100
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "subject": "MATH",
+      "number": "234",
+      "units": 4,
+      "groups": [
+         {
+            "lecs": [
+               {
+                  "section": "01",
+                  "days": "MWF",
+                  "from": 1600,
+                  "to": 1800
+               }
+            ]
+         }
+      ]
+   }
+]
+</div>
+</pre>
+
+<div><input type="button" value="Load Example" onclick="loadExample()"></div>
+<form action="/schedules" method="post">
+	<div>Classes JSON</div>
+	<div><textarea id="classes" name="classes" rows="30" cols="60"></textarea></div>
+	<div>Min units: <input type="text" name="minUnits"></div>
+	<div>Max units: <input type="text" name="maxUnits"></div>
+	<div><input type="submit" value="Generate Schedules"></div>
+</form>
+</html>
